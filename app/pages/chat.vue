@@ -3,6 +3,14 @@ import ChatWindow from "~/components/ChatWindow.vue";
 
 const { chat, messages, sendMessage } = useChat();
 
+const typing = ref(false);
+
+const handleSendMessage = async (message: string) => {
+  typing.value = true;
+  await sendMessage(message);
+  typing.value = false;
+};
+
 const appConfig = useAppConfig();
 
 const title = computed(() =>
@@ -17,7 +25,7 @@ useHead({
 </script>
 
 <template>
-  <ChatWindow :messages :chat @send-message="sendMessage" />
+  <ChatWindow :messages :chat :typing @send-message="handleSendMessage" />
 </template>
 
 <style scoped></style>

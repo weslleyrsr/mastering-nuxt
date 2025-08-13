@@ -1,6 +1,10 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
   "files": [],
+  "composite": true,
+  "compilerOptions": {
+    "types": ["@types/node", "nuxt", "nitropack"]
+  },
   "references": [
     {
       "path": "./.nuxt/tsconfig.app.json"

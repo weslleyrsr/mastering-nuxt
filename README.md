@@ -72,4 +72,16 @@ yarn preview
 bun run preview
 ```
 
+## Environment
+
+Environment variables:
+
+```env
+# Private
+NUXT_OPENAI_API_KEY=your_openai_api_key_here
+
+# Public
+NUXT_PUBLIC_SOME_SHIT=Hello frontend
+```
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

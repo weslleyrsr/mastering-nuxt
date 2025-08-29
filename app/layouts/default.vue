@@ -1,5 +1,8 @@
+<script setup lang="ts">
+</script>
 <template>
   <div class="layout-container">
+    <AppHeader />
     <div id="main-content" class="main-content">
       <slot />
     </div>
@@ -8,13 +11,13 @@
 
 <style scoped>
 .layout-container {
-  height: calc(100vh - 4rem);
+  height: 100dvh;
   background-color: var(--background-color-default);
 }
 
 .main-content {
-  height: 100%;
+  height: calc(100% - 4rem);
   overflow-y: auto;
-  margin-top: 4rem;
+  transform: translateY(4rem);
 }
 </style>

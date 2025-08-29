@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import ChatWindow from "~/components/ChatWindow.vue";
 
+const route = useRoute();
+console.log('route', route.params);
+
+const { id } = route.params;
+console.log('id', id);
+
 const { chat, messages, sendMessage } = useChat();
 
 const typing = ref(false);
